@@ -1,0 +1,210 @@
+/* Desktop */
+
+@media screen and (min-width:769px){
+    .wrapper{
+        /* max-width: 700px; */
+        margin: 0 auto;
+        padding: 0px;
+
+    }
+    .menu-desktop{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        /* max-width: 700px; */
+        margin: 0 auto;
+        background-color: #615574;
+    }
+
+    .links a:nth-child(n+2){
+        margin: 0 0 0 40px;
+    }
+    .links{
+        display: flex;
+        width: 82%;
+
+    }
+
+    .links a{
+        font-size: 19px;
+        text-decoration: none;
+        border: 2px solid blue;
+        padding: 5px;
+        color: black;
+        width: 100%;
+        text-align: center;
+        /* background: rgb(241,236,0); */
+        background-color: #FFF540;
+        transition: all 0.3s ease-out;
+
+    }
+    .links a:hover{
+        background-color: aquamarine;
+        transition: all 0.6s ease-out;
+    }
+
+    .collapsible, .content,.block-background-circles,.block-photo img, .block-photo {
+        display: none;
+    }
+    .block-photo-desktop{
+        display: block;
+
+    }
+    .block-photo-desktop img{
+        width: min-content;
+        position: relative;
+        bottom: -5px;
+
+
+    }
+
+    .block-text img{
+        display: none;
+
+    }
+
+    .container-main-page{
+        background: #f8f7f0;
+        background-image: url('img/urk-flag-red.png');
+        background-repeat:no-repeat;
+        background-position: 130%;
+        margin: 0 0 20px;
+    }
+    .block-text{
+        max-width: fit-content;
+        position: relative;
+        left: 20px;
+    }
+
+    .container-text h2{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .block1, .block2{
+        margin: 0 20px;
+    }
+    .container-bar{
+        margin: 20px 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: auto;
+    }
+    .h{
+        font-size:30px;
+        /* border: blue 5px solid; */
+        text-align: center;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .container-projects{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: auto;
+        margin: 20px 0 30px;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+
+    .block-project{
+        margin: 0 18px;
+        /* height: 500px; */
+        overflow: hidden;
+        /* border: 4px solid #1531AE; */
+        border-left: 4px solid #1531AE;
+        border-right: 4px solid #1531AE;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .block-project img{
+        height: 50%;
+        width: 100%;
+        object-fit: contain;
+        /* margin: 0 auto; */
+        margin: 5px 0 15px;
+    }
+    .prj2 img{
+        height: 54.5%;
+    }
+
+
+    .block-project p{
+        padding: 5px 20px;
+        margin: 0 auto;
+        font-size: 22px;
+    }
+    .block-project h3{
+        font-size: 25px;
+    }
+
+
+
+    .container-about{
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+    }
+    .block-about-photo{
+        /* height: 500px; */
+        background-color: white;
+        border-radius: 0;
+        /* overflow: scroll; */
+        /* overflow: auto; */
+        /* margin: 0 20px 0; */
+    }
+    .block-about-photo img{
+        width: 100%;
+        height: 100%;
+        /* object-fit: contain; */
+    }
+
+
+
+    .block-about-text{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        font-size: 25px;
+        margin: 0 0 0 10px;
+    }
+
+    .container-flex{
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    footer{
+        margin: 30px;
+    }
+
+
+    .container-text a{
+        margin: 20px 20px 0;
+
+        font-size: 22px;
+        text-decoration: none;
+        border: 2px solid blue;
+        padding: 5px;
+        color: black;
+        width: 80%;
+        text-align: center;
+        /* background: rgb(241,236,0);
+         */
+         background-color: #FFF540;
+        box-shadow: 2px black;
+        transition: all 0.3s ease-out;
+    }
+    .container-text a:hover{
+        background-color: aquamarine;
+        transition: all 0.6s ease-out;
+    }
+
+
+
+}
+
+
