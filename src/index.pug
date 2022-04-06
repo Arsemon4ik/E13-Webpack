@@ -1,102 +1,10 @@
-doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0')
-    title Portfolio
-    link(rel='preload' as='font' href='fonts/Roboto-MediumItalic.ttf')
-    link(rel='stylesheet' href='/dist/main.css')
+    title WebPack Test
+    link(href='style.css' rel='stylesheet')
   body
-    .wrapper
-      header
-        nav.menu
-          button.collapsible(type='button')
-            img#img(src='svg/collapse.svg' alt='')
-          .content
-            a(href='#skill') Skill bar
-            a(href='#about') About me
-            a(href='#projects') My Projects
-            a(href='#social') Find me
-        nav.menu-desktop
-          .links
-            a(href='#skill') Skill bar
-            a(href='#about') About me
-            a(href='#projects') My Projects
-            a(href='#social') Find me
-      main
-        .container-main-page
-          .block-text
-            img(src='svg/hi.svg' alt='')
-            h1 I'm a Web Developer from Ukraine who changes this world with powerful projects
-            img(src='svg/power.svg' alt='')
-          .block-photo
-            img(src='img/pic-mobile.png' alt='')
-          .block-photo-desktop
-            img(src='img/pic.png' alt='')
-          .block-background-circles
-            img(src='svg/circ5.svg' alt='')
-        h2#skill.h Skill bar
-        .container-bar.container-text
-          .block1
-            p HTML
-            .container
-              .skills.html 70%
-            p CSS
-            .container
-              .skills.css 50%
-            p JavaScript
-            .container
-              .skills.js 50%
-          .block2
-            p Python
-            .container
-              .skills.python 75%
-            p C++
-            .container
-              .skills.c 50%
-            p C#
-            .container
-              .skills.cs 60%
-        h2#projects.h My Projects
-        .container-projects.container-text
-          .block-project.prj1
-            h3 Football project
-            .text
-              p
-                | This project is about football matches. This is the first time I've used object-oriented style.
-            img(src='img/cmd.jpeg' alt='')
-            a(href='https://github.com/Arsemon4ik/CourseWork' target='_blank' style='margin: 0 0 10px;') Link GitHub
-          // <hr>
-          .block-project.prj2
-            h3 Telegram bot
-            .text
-              p
-                | My first telegram bot. I used Python.
-            img(src='img/teleg.png' alt='')
-            a(href='https://github.com/Arsemon4ik/MyTelegramBot' target='_blank' style='margin: 0 0 10px;') Link GitHub
-          // <hr>
-          .block-project.prj3
-            h3 Advertising site with backend
-            .text
-              p
-                | My first adv site with full structure: Backend, Frontend, SqLite3.
-            img(src='img/site.png' alt='')
-            a(href='https://github.com/Arsemon4ik/jango_projects/tree/main/D16' target='_blank' style='margin: 0 0 10px;') Link GitHub
-        h2#about.h About me
-        .container-about
-          .block-about-photo
-            img(src='img/photo-about.png' alt='')
-          .block-about-text.text
-            p
-              | My name is Arseniy. I'm a student of the University of KPI. I'm a beginner programmer with great interest.I've been studying Premiere Pro and After Effects for 4 years. I'm also interested in Photoshop and Illustrator. I continue improving and deepening my knowledge in IT and the direction I study now is FullStack Python Web developer.
-      hr
-      footer
-        h2#social.h Find me
-        .container-text
-          .container-flex
-            a(href='https://www.instagram.com/_arsemon4ik/' target='_blank')
-              img(src='svg/inst.svg' alt='')
-            a(href='https://tttttt.me/arsemon4ik' target='_blank')
-              img(src='svg/teleg.svg' alt='')
-    script(src='/dist/main.js')
+    h1 WebPack Server+JSON Server
+    button.btn-get-json(type='submit' style='font-size: 25px;') Get Id's
+    .json-info
+    script(src='index.js')

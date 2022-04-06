@@ -23,10 +23,10 @@ module.exports = {
            new CssMinimizerPlugin(), //optimize css
            new TerserWebpackPlugin(),
         //    new HtmlWebPackPlugin({template: path.join(__dirname, 'src/index.pug')})
-           new HtmlWebPackPlugin({
-               template:"./src/index.pug",
-            //    filename: "index.html"
-            }),
+        //    new HtmlWebPackPlugin({
+        //        template:"./src/index.pug",
+        //     //    filename: "index.html"
+        //     }),
     ],
     output: {
       filename: 'main.js',

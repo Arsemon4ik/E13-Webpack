@@ -1,8 +1,13 @@
-// const webpack = require('webpack')
+const webpack = require('webpack')
+// const StylelintPlugin = require('stylelint-webpack-plugin');
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
 
 
 
@@ -10,40 +15,46 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
-    devServer: {
-        contentBase: "../dist",
-        // open:true,
-        stats: {
-            children: false,
-            maxModules: 0
-           }
+    devtool: 'inline-source-map',
+   devServer: {
+        historyApiFallback: true,
+        static: {
+            directory: path.join(__dirname, "/dist")
+          },
+        hot: true,
+        port: 8080,
    },
     plugins: [
            new MiniCssExtractPlugin(),
-        //    new StylelintPlugin(),
-           new HtmlWebPackPlugin(),
+           new CssMinimizerPlugin(), //optimize css
+           new TerserWebpackPlugin(),
+           new webpack.HotModuleReplacementPlugin(),
     ],
     output: {
       filename: 'main.js',
     },
+    optimization: {
+        minimize: true,
+        minimizer: [new CssMinimizerPlugin({}) , new TerserWebpackPlugin({})],
+    },
     module: {
-        rules:
-    [
+        rules: [
         {
             test: /\.css$/,
             use: [{
                 loader : MiniCssExtractPlugin.loader,
                 options : {
-                    esModule : true
+                    esModule : true,
                 }
-            }, 'css-loader','stylint-loader']
+            }, 'css-loader'],
         },
         {
-            test: /\.js$/,
-            exclude:'/node_modules/',
-            use: 'eslint-loader',
-        },
-
+            test: /\.pug$/,
+            loader: 'pug-loader',
+            options: {
+                pretty: true
+            }
+        }
     ]
-  },
-};
+      },
+  };

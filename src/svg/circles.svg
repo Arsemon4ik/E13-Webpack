@@ -1,5 +1,0 @@
-<svg width='380' height='500'>
-    <circle cx="350" cy="160" r="150" stroke="none" stroke-width="10" fill="blue"/>
-    <circle cx="350" cy="310" r="150" stroke="none" stroke-width="10" fill="yellow"/>
-    <!-- <rect x="165" y="10" width="170" height="480" fill="white"/> -->
-</svg>
